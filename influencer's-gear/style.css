@@ -58,7 +58,6 @@ header {
   list-style: none;
 }
 .nav_items .nav_link {
-  /* color: #e02c6d; */
   color: #3a3a3a;
   font-size: 1rem;
   font-weight: 600;
@@ -74,9 +73,7 @@ header {
   justify-content: space-between;
   align-items: center;
 }
-#hero #hero_content {
-  max-width: 582px;
-}
+
 #hero_content #hero_title {
   font-size: 2.5rem;
   font-weight: 700;
@@ -132,7 +129,48 @@ header {
     flex-direction: column-reverse;
     gap: 14px;
   }
+  #hero #hero_content {
+    text-align: center;
+  }
+  #hero_content #hero_title {
+    font-size: 1.5rem;
+    line-height: 49px;
+  }
+  .description {
+    font-size: 0.87rem;
+  }
+  .btn_primary {
+    font-size: 0.87rem;
+  }
   #hero_image #main_camera {
     margin-right: 0px;
+  }
+}
+
+/*  responsive media query for medium devices  */
+@media screen and (min-width: 576px) and (max-width: 992px) {
+  .container {
+    width: 97%;
+    margin: 0 auto;
+  }
+  #navbar #hamburger {
+    display: none;
+  }
+  #navbar #brand_name {
+    font-size: 1rem;
+  }
+  #nav_links {
+    gap: 10px;
+  }
+  .nav_items .nav_link2 {
+    display: block;
+  }
+  #hero {
+    gap: 10px;
+    align-items: center;
+  }
+  #hero_content #hero_title {
+    font-size: 1.5rem;
+    line-height: 45px;
   }
 }
