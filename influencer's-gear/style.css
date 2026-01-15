@@ -1,0 +1,138 @@
+/*Google font : poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.poppins_font {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+* {
+  border: 1px solid red;
+}
+body {
+  border: 2px dashed blue;
+}
+/* shared styles */
+.container {
+  width: 85.71%;
+  margin: 0 auto;
+}
+.description {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #3a3a3a;
+  margin-bottom: 17px;
+}
+.btn_primary {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #e02c6d;
+  padding: 10px 56px 10px 24px;
+  border-radius: 41px;
+  border: none;
+}
+.btn_primary:hover {
+  background-color: #000000;
+}
+header {
+  margin-top: 96px;
+}
+
+/* navbar styles */
+#navbar {
+  display: flex;
+  justify-content: space-between;
+}
+#navbar #brand_name {
+  /* color: #e02c6d; */
+  font-size: 24px;
+  font-weight: 700;
+  color: #3a3a3a;
+}
+#nav_links {
+  display: flex;
+  gap: 34px;
+}
+
+#nav_links .nav_items {
+  list-style: none;
+}
+.nav_items .nav_link {
+  /* color: #e02c6d; */
+  color: #3a3a3a;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* hero section styles */
+
+#hero {
+  margin-top: 145px;
+  display: flex;
+  gap: 133px;
+  justify-content: space-between;
+  align-items: center;
+}
+#hero #hero_content {
+  max-width: 582px;
+}
+#hero_content #hero_title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 70px;
+  color: #3a3a3a;
+  margin: 16px 0;
+}
+#hero #hero_image {
+  position: relative;
+}
+#hero_image #main_camera {
+  margin-right: 20px;
+  width: 100%;
+}
+#hero_image #circle {
+  position: absolute;
+  left: -20px;
+  top: -10px;
+  z-index: -1;
+  width: 100%;
+}
+
+#arrow_btn i {
+  position: relative;
+  top: 2px;
+  left: 20px;
+}
+
+/* responsive media query for small devices */
+@media screen and (max-width: 576px) {
+  .container {
+    width: 97%;
+    margin: 0 auto;
+  }
+  header {
+    margin-top: 20px;
+  }
+  #navbar {
+    align-items: center;
+    gap: 55px;
+  }
+  #navbar #brand_name {
+    font-size: 1rem;
+  }
+  #nav_links {
+    gap: 0px;
+  }
+  .nav_items .nav_link2 {
+    display: none;
+  }
+  #hero {
+    margin-top: 22px;
+    flex-direction: column-reverse;
+    gap: 14px;
+  }
+  #hero_image #main_camera {
+    margin-right: 0px;
+  }
+}
