@@ -5,12 +5,12 @@
   font-weight: 100;
   font-style: normal;
 }
-* {
+/* * {
   border: 1px solid red;
 }
 body {
   border: 2px dashed blue;
-}
+} */
 /* shared styles */
 .display_flex {
   display: flex;
@@ -290,9 +290,9 @@ main #companies {
     grid-template-columns: repeat(3, 1fr);
   }
   .gears_cards .gear_card {
-    width: 80%;
+    width: 100%;
   }
   .gear_card .card_img {
-    max-width: 100%;
+    width: 100%;
   }
 }
