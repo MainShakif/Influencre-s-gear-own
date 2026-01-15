@@ -102,6 +102,17 @@ header {
   left: 20px;
 }
 
+/* main: companies section start */
+main #companies {
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+  margin-top: 100px;
+  padding: 36px 61px;
+  display: flex;
+  gap: 60px;
+  justify-content: space-between;
+}
+
 /* responsive media query for small devices */
 @media screen and (max-width: 576px) {
   .container {
@@ -148,8 +159,14 @@ header {
   #hero_image #main_camera {
     margin-right: 0px;
   }
-}
 
+  main #companies {
+    gap: 20px;
+    padding: 10px 0;
+    margin: 50px 0;
+    flex-wrap: wrap;
+  }
+}
 /*  responsive media query for medium devices  */
 @media screen and (min-width: 576px) and (max-width: 992px) {
   .container {
@@ -175,6 +192,12 @@ header {
   #hero_content #hero_title {
     font-size: 1.5rem;
     line-height: 45px;
+  }
+  main #companies {
+    gap: 20px;
+    padding: 10px 0;
+    margin: 50px 0;
+    flex-wrap: wrap;
   }
 }
 
