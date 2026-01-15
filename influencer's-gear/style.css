@@ -12,10 +12,21 @@ body {
   border: 2px dashed blue;
 }
 /* shared styles */
+.display_flex {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 .container {
   width: 85.71%;
   margin: 0 auto;
 }
+#hero,
+main #companies,
+.gears {
+  margin-top: 145px;
+}
+
 .description {
   font-size: 1rem;
   font-weight: 500;
@@ -44,7 +55,6 @@ header {
   justify-content: space-between;
 }
 #navbar #brand_name {
-  /* color: #e02c6d; */
   font-size: 24px;
   font-weight: 700;
   color: #3a3a3a;
@@ -65,7 +75,6 @@ header {
 }
 
 /* hero section styles */
-
 #hero {
   margin-top: 145px;
   display: flex;
@@ -73,7 +82,6 @@ header {
   justify-content: space-between;
   align-items: center;
 }
-
 #hero_content #hero_title {
   font-size: 2.5rem;
   font-weight: 700;
@@ -104,13 +112,70 @@ header {
 
 /* main: companies section start */
 main #companies {
-  border-top: 1px solid #000000;
-  border-bottom: 1px solid #000000;
+  border-top: 1px solid #5e63667a;
+  border-bottom: 1px solid #5e63667a;
   margin-top: 100px;
   padding: 36px 61px;
   display: flex;
-  gap: 60px;
-  justify-content: space-between;
+  gap: 30px;
+  justify-content: space-evenly;
+}
+
+/* gears section styles */
+.gears .gears_cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  justify-items: start;
+}
+.gears_cards .gear_card {
+  width: 350px;
+  padding: 25px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.15);
+}
+.gear_card .card_img {
+  width: 300px;
+  text-align: center;
+  margin-bottom: 16px;
+  border-radius: 5px;
+}
+.gear_card .card_title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 25px;
+  color: #18191f;
+  margin: 6px 0;
+}
+.gear_card .card_price {
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 60px;
+  color: #18191f;
+  margin: 6px 0;
+  margin-bottom: 10px;
+}
+.gear_card .rating {
+  margin: -10px 0;
+}
+
+.rating_star i {
+  width: 20px;
+}
+.rating .rating_point {
+  font-size: 0.87;
+  font-weight: 600;
+  line-height: 22px;
+  color: #5e6366;
+}
+.gear_card .card_footer {
+  font-size: 0.87;
+  font-weight: 600;
+  line-height: 22px;
+  color: #787885;
+}
+.rating_star {
+  color: #fb8200;
 }
 
 /* responsive media query for small devices */
@@ -126,9 +191,6 @@ main #companies {
     align-items: center;
     gap: 55px;
   }
-  /* #navbar #hamburger {
-    display: none;
-  } */
   #navbar #brand_name {
     font-size: 1rem;
   }
@@ -166,6 +228,15 @@ main #companies {
     margin: 50px 0;
     flex-wrap: wrap;
   }
+  .gears .gears_cards {
+    grid-template-columns: 1fr;
+  }
+  .gears_cards .gear_card {
+    width: 80%;
+  }
+  .gear_card .card_img {
+    max-width: 100%;
+  }
 }
 /*  responsive media query for medium devices  */
 @media screen and (min-width: 576px) and (max-width: 992px) {
@@ -199,11 +270,29 @@ main #companies {
     margin: 50px 0;
     flex-wrap: wrap;
   }
+  .gears .gears_cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .gears_cards .gear_card {
+    width: 80%;
+  }
+  .gear_card .card_img {
+    max-width: 100%;
+  }
 }
 
 /* responsive media query for big devices  */
 @media screen and (min-width: 992px) {
   #navbar #hamburger {
     display: none;
+  }
+  .gears .gears_cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .gears_cards .gear_card {
+    width: 80%;
+  }
+  .gear_card .card_img {
+    max-width: 100%;
   }
 }
