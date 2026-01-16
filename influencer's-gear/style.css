@@ -5,12 +5,12 @@
   font-weight: 100;
   font-style: normal;
 }
-* {
+/* * {
   border: 1px solid red;
 }
 body {
   border: 2px dashed blue;
-}
+} */
 /* shared styles */
 .display_flex {
   display: flex;
@@ -18,7 +18,7 @@ body {
   gap: 10px;
 }
 .container {
-  width: 85.71%;
+  width: 1400px;
   margin: 0 auto;
 }
 #hero,
@@ -126,31 +126,36 @@ main #companies {
 }
 
 /* gears section styles */
-.gears .gears_cards {
+.section_heading {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+}
+.gears_cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
-.gears_cards .gear_card {
-  width: 350px;
+.gear_card {
+  margin-left: 10px;
   padding: 25px;
   border-radius: 5px;
   box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.15);
 }
-.gear_card .card_img {
+.card_img {
   width: 100%;
   text-align: center;
   margin-bottom: 16px;
   border-radius: 5px;
 }
-.gear_card .card_title {
+.card_title {
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 25px;
   color: #18191f;
   margin: 6px 0;
 }
-.gear_card .card_price {
+.card_price {
   font-size: 1.25rem;
   font-weight: 400;
   line-height: 60px;
@@ -158,7 +163,7 @@ main #companies {
   margin: 6px 0;
   margin-bottom: 10px;
 }
-.gear_card .rating {
+.rating {
   margin: -10px 0;
 }
 
@@ -179,6 +184,38 @@ main #companies {
 }
 .rating_star {
   color: #fb8200;
+}
+
+#see_more {
+  text-align: right;
+  margin-top: 50px;
+  color: rgba(224, 44, 109, 0.87);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+#see_more i {
+  position: relative;
+  right: -7px;
+}
+
+/*  featured product styles */
+#featured_product_container {
+  display: flex;
+  justify-content: space-between;
+  gap: 255px;
+}
+/* #featured_product_content {
+  width: 610px;
+} */
+/* #featured_product_container_image {
+  width: 404px;
+} */
+#featured_product_content_title {
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: 0A0826;
+  line-height: 60px;
 }
 
 /* responsive media query for small devices */
@@ -231,15 +268,26 @@ main #companies {
     margin: 50px 0;
     flex-wrap: wrap;
   }
-  .gears .gears_cards {
+  .gears_cards {
     display: grid;
     grid-template-columns: 1fr;
     justify-content: center;
     align-items: center;
   }
-  .gears_cards .gear_card {
+  .gear_card {
     width: 80%;
     margin: 0 auto;
+  }
+  #featured_product_container {
+    flex-direction: column-reverse;
+    gap: 30px;
+  }
+  #featured_product_content {
+    text-align: center;
+  }
+  #featured_product_content_title {
+    font-size: 1.5rem;
+    line-height: 40px;
   }
 }
 /*  responsive media query for medium devices  */
@@ -274,10 +322,10 @@ main #companies {
     margin: 50px 0;
     flex-wrap: wrap;
   }
-  .gears .gears_cards {
+  .gears_cards {
     grid-template-columns: repeat(2, 1fr);
   }
-  .gears_cards .gear_card {
+  .gear_card {
     width: 80%;
   }
 }
@@ -287,7 +335,7 @@ main #companies {
   #navbar #hamburger {
     display: none;
   }
-  .gears .gears_cards {
+  /* .gears .gears_cards {
     grid-template-columns: repeat(3, 1fr);
   }
   .gears_cards .gear_card {
@@ -295,5 +343,5 @@ main #companies {
   }
   .gear_card .card_img {
     width: 100%;
-  }
+  } */
 }
